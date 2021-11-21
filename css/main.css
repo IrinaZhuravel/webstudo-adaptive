@@ -340,13 +340,24 @@ body {
 }
 
 .header__logo {
-  margin-right: 92px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--primary-logo-color);
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 92px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -490,6 +501,104 @@ body {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
   padding-left: 10px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  color: var(--header-text-color);
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav__link:hover, .nav__link:focus {
+  color: var(--effects-color);
+}
+
+.nav__link.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--effects-color);
+  bottom: -42px;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__link.current::after {
+    bottom: -33px;
+  }
+}
+
+.active {
+  color: var(--effects-color);
+}
+
+.header__contacts,
+.header__contacts .contacts__item {
+  color: var(--header-contact-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contacts,
+  .header__contacts .contacts__item {
+    display: flex;
+    vertical-align: baseline;
+    align-items: center;
+  }
+}
+
+.header__contacts {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
+
+.contacts__link {
+  color: var(--header-contact-color);
+  fill: var(--header-contact-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color var(--transition), fill var(--transition);
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: flex;
+    vertical-align: baseline;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+}
+
+.contacts__item .contacts__link:hover,
+.contacts__item .contacts__link:focus {
+  color: var(--effects-color);
+  fill: var(--effects-color);
 }
 
 .hero {

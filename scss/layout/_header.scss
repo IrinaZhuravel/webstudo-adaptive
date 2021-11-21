@@ -19,13 +19,20 @@
 }
 
 .header__logo {
-	margin-right: 92px;
 	font-family: "Raleway";
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	color: var(--primary-logo-color);
+
+	@media screen and (min-width: 768px) {
+		margin-right: 88px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 92px;
+	}
 }
 
 .header__nav {
@@ -153,74 +160,89 @@
 	padding-left: 10px;
 }
 
-// .nav__list {
-// 	display: flex;
-// 	align-items: center;
-// 	font-weight: 500;
-// 	font-size: 14px;
-// 	line-height: 1.14;
-// 	letter-spacing: 0.02em;
-// }
+.nav__list {
+	display: flex;
+	align-items: center;
+}
 
-// .nav__item:not(:last-child) {
-// 	margin-right: 50px;
-// }
-// .nav__link {
-// 	padding-top: 32px;
-// 	padding-bottom: 32px;
-// 	color: var(--header-text-color);
-// 	position: relative;
-// 	transition: color var(--transition);
+.nav__item:not(:last-child) {
+	margin-right: 50px;
+}
+.nav__link {
+	color: var(--header-text-color);
+	position: relative;
+	transition: color var(--transition);
 
-// 	&:hover,
-// 	&:focus {
-// 		color: var(--effects-color);
-// 	}
-// 	&.current::after {
-// 		content: "";
-// 		display: block;
-// 		width: 100%;
-// 		position: absolute;
-// 		height: 4px;
-// 		border-radius: 2px;
-// 		background-color: var(--effects-color);
-// 		bottom: 0;
-// 	}
-// }
+	&:hover,
+	&:focus {
+		color: var(--effects-color);
+	}
+	&.current::after {
+		content: "";
+		display: block;
+		width: 100%;
+		position: absolute;
+		height: 4px;
+		border-radius: 2px;
+		background-color: var(--effects-color);
+		bottom: -42px;
 
-// .header__contacts,
-// .header__contacts .contacts__item {
-// 	display: flex;
-// 	margin-left: auto;
-// 	align-items: center;
-// 	color: var(--header-contact-color);
-// 	vertical-align: baseline;
-// }
+		@media screen and (min-width: 1200px) {
+			bottom: -33px;
+		}
+	}
+}
+.active {
+	color: var(--effects-color);
+}
 
-// .contacts__item:not(:last-child) {
-// 	margin-right: 50px;
-// }
+.header__contacts,
+.header__contacts .contacts__item {
+	color: var(--header-contact-color);
 
-// .contacts__link {
-// 	display: flex;
-// 	fill: var(--header-contact-color);
-// 	vertical-align: middle;
-// 	font-weight: 500;
-// 	font-size: 14px;
-// 	line-height: 1.14;
-// 	letter-spacing: 0.02em;
-// 	color: var(--header-contact-color);
-// 	padding-top: 32px;
-// 	padding-bottom: 32px;
-// 	transition: color var(--transition), fill var(--transition);
-// }
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		vertical-align: baseline;
+		align-items: center;
+	}
+}
+.header__contacts {
+	margin-left: auto;
+}
+.contacts__item:not(:last-child) {
+	@media screen and (min-width: 768px) {
+		margin-bottom: 10px;
+	}
 
-// .contacts__icon {
-// 	margin-right: 10px;
-// }
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 0;
+		margin-right: 50px;
+	}
+}
 
-// .contacts__item .contacts__link:hover,
-// .contacts__item .contacts__link:focus {
-// 	color: var(--effects-color);
-// 	fill: var(--effects-color);
-// }
+.contacts__link {
+	color: var(--header-contact-color);
+	fill: var(--header-contact-color);
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+
+	transition: color var(--transition), fill var(--transition);
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		vertical-align: baseline;
+	}
+}
+
+.contacts__icon {
+	margin-right: 10px;
+}
+
+.contacts__item .contacts__link:hover,
+.contacts__item .contacts__link:focus {
+	color: var(--effects-color);
+	fill: var(--effects-color);
+}
