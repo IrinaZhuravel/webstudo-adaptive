@@ -1,0 +1,37 @@
+.social__list {
+	display: flex;
+	justify-content: center;
+}
+.social__item {
+	width: 44px;
+	height: 44px;
+
+	&:not(last-child) {
+		margin-right: 10px;
+	}
+}
+
+.social__icon {
+	fill: var(--social-team-color);
+	transition: fill var(--transition);
+
+	.social__link:hover &,
+	.social__link:focus & {
+		fill: var(--social-footer-color);
+	}
+}
+
+.social__link {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: background-color var(--transition);
+
+	&:hover,
+	&:focus {
+		background-color: var(--effects-color);
+	}
+}

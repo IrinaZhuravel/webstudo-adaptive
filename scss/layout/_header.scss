@@ -1,0 +1,154 @@
+.header__container {
+	display: flex;
+	align-items: center;
+}
+.header {
+	border-bottom: 1px solid #ececec;
+	padding-top: 16px;
+	padding-bottom: 16px;
+
+	@media screen and (min-width: 768px) {
+		padding-top: 26px;
+		padding-bottom: 26px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 24px;
+		padding-top: 25px;
+	}
+}
+
+.header__logo {
+	margin-right: 92px;
+	font-family: "Raleway";
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	color: var(--primary-logo-color);
+}
+
+.header__nav {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.contacts__item {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.header__burger {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	line-height: 0;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.burger__icon {
+	fill: currentColor;
+	transition: fill var(--transition);
+
+	&:focus {
+		fill: var(--effects-color);
+	}
+}
+.mobile__menu {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #ffffff;
+	padding: 48px 40px;
+}
+.menu__close {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	line-height: 0;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+}
+// .nav__list {
+// 	display: flex;
+// 	align-items: center;
+// 	font-weight: 500;
+// 	font-size: 14px;
+// 	line-height: 1.14;
+// 	letter-spacing: 0.02em;
+// }
+
+// .nav__item:not(:last-child) {
+// 	margin-right: 50px;
+// }
+// .nav__link {
+// 	padding-top: 32px;
+// 	padding-bottom: 32px;
+// 	color: var(--header-text-color);
+// 	position: relative;
+// 	transition: color var(--transition);
+
+// 	&:hover,
+// 	&:focus {
+// 		color: var(--effects-color);
+// 	}
+// 	&.current::after {
+// 		content: "";
+// 		display: block;
+// 		width: 100%;
+// 		position: absolute;
+// 		height: 4px;
+// 		border-radius: 2px;
+// 		background-color: var(--effects-color);
+// 		bottom: 0;
+// 	}
+// }
+
+// .active {
+// 	color: var(--effects-color);
+// }
+
+// .header__contacts,
+// .header__contacts .contacts__item {
+// 	display: flex;
+// 	margin-left: auto;
+// 	align-items: center;
+// 	color: var(--header-contact-color);
+// 	vertical-align: baseline;
+// }
+
+// .contacts__item:not(:last-child) {
+// 	margin-right: 50px;
+// }
+
+// .contacts__link {
+// 	display: flex;
+// 	fill: var(--header-contact-color);
+// 	vertical-align: middle;
+// 	font-weight: 500;
+// 	font-size: 14px;
+// 	line-height: 1.14;
+// 	letter-spacing: 0.02em;
+// 	color: var(--header-contact-color);
+// 	padding-top: 32px;
+// 	padding-bottom: 32px;
+// 	transition: color var(--transition), fill var(--transition);
+// }
+
+// .contacts__icon {
+// 	margin-right: 10px;
+// }
+
+// .contacts__item .contacts__link:hover,
+// .contacts__item .contacts__link:focus {
+// 	color: var(--effects-color);
+// 	fill: var(--effects-color);
+// }
