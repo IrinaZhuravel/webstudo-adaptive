@@ -32,11 +32,17 @@
 	@media screen and (max-width: 767px) {
 		display: none;
 	}
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
 }
 
 .contacts__item {
 	@media screen and (max-width: 767px) {
 		display: none;
+	}
+	@media screen and (min-width: 768px) {
+		display: block;
 	}
 }
 
@@ -47,6 +53,10 @@
 	line-height: 0;
 	cursor: pointer;
 	margin-left: auto;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
 }
 
 .burger__icon {
@@ -64,8 +74,20 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
 	background-color: #ffffff;
 	padding: 48px 40px;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity var(--transition), visibility var(--transition);
+}
+
+.mobile__menu.is-open {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: all;
 }
 .menu__close {
 	border: none;
@@ -77,6 +99,60 @@
 	top: 10px;
 	right: 15px;
 }
+
+.menu__item:not(:last-child) {
+	margin-bottom: 32px;
+}
+.menu__link {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 1.17;
+	letter-spacing: 0.02em;
+	color: var(--header-text-color);
+}
+.active {
+	color: var(--effects-color);
+}
+.menu__connect {
+	margin-top: auto;
+	margin-bottom: 64px;
+}
+.menu__contacts-item:not(:last-child) {
+	margin-bottom: 32px;
+}
+.contacts__link--tel {
+	font-weight: 500;
+	font-size: 34px;
+	line-height: 1.17;
+	letter-spacing: 0.02em;
+	color: var(--effects-color);
+}
+.contacts__link--mail {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1.16;
+	letter-spacing: 0.02em;
+	color: var(--header-contact-color);
+}
+.menu__social-list {
+	display: flex;
+}
+
+.menu__social-link {
+	display: block;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.22;
+	letter-spacing: 0.02em;
+	color: var(--effects-color);
+	padding-left: 10px;
+}
+.menu__social-link--border {
+	border-right: 1px solid rgba(33, 33, 33, 0.2);
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
 // .nav__list {
 // 	display: flex;
 // 	align-items: center;
@@ -110,10 +186,6 @@
 // 		background-color: var(--effects-color);
 // 		bottom: 0;
 // 	}
-// }
-
-// .active {
-// 	color: var(--effects-color);
 // }
 
 // .header__contacts,
