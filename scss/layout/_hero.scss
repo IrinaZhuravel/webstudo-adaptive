@@ -1,10 +1,9 @@
 .hero {
 	padding-top: 118px;
 	padding-bottom: 118px;
-	margin-left: auto;
-	margin-right: auto;
+
 	background-color: var(--primary-background-color);
-	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_img_m.jpg);
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-m.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -12,40 +11,39 @@
 	min-width: 480px;
 	text-align: center;
 	@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-		background-image: url(../images/hero/hero_img_m@2x.jpg);
+		background-image: url(../images/hero/hero-img-m@2x.jpg);
 	}
 	@media screen and (min-width: 768px) {
-		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_img_t.jpg);
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-t.jpg);
 
 		background-size: cover;
 		min-width: 768px;
 		@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-			background-image: url(../images/hero/hero_img_t@2x.jpg);
+			background-image: url(../images/hero/hero-img-t@2x.jpg);
 		}
 	}
 
 	@media screen and (min-width: 1200px) {
-		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_img_d.jpg);
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-d.jpg);
 
 		padding-top: 200px;
 		padding-bottom: 200px;
 		background-size: cover;
 		height: 600px;
-		min-width: 1600px;
+		// min-width: 1200px;
 		@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-			background-image: url(../images/hero/hero_img_d@2x.jpg);
+			background-image: url(../images/hero/hero-img-d@2x.jpg);
 		}
 	}
 }
 .hero__title {
+	display: block;
 	font-weight: 900;
 	font-size: 26px;
 	line-height: 1.62;
-
 	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
-	margin: 0 auto;
 	margin-bottom: 30px;
 
 	color: var(--primary-title-color);

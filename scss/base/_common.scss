@@ -17,6 +17,7 @@ button {
 body {
 	font-family: "Roboto", sans-serif;
 	color: var(--primary-page-color);
+	overflow-x: hidden;
 }
 .list {
 	list-style: none;

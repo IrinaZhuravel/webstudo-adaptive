@@ -1,40 +1,74 @@
-.benefits {
-	padding-top: 94px;
+.clients {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	@media screen and (min-width: 1200px) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
-.benefits__list {
+.clients__title {
+	margin-bottom: 30px;
+	font-size: 28px;
+	line-height: 1.17;
+	@media screen and (min_width: 1200px) {
+		margin-bottom: 50px;
+		font-size: 36px;
+		line-height: 1.16;
+	}
+}
+.clients__list {
 	display: flex;
-	margin-left: -30px;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin-top: -30px;
+	margin-left: -30px;
 }
-.benefits__item {
-	flex-basis: calc(100% / 4 - 30px);
-	margin-left: 30px;
+.clients__item {
 	margin-top: 30px;
+	margin-left: 30px;
+	flex-basis: calc(100% / 2 - 30px);
+
+	@media screen and (min-width: 768px) {
+		flex-basis: calc(100% / 3 - 30px);
+	}
+
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc(100% / 6 - 30px);
+	}
 }
-.benefits__logo {
+
+.clients__link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 120px;
-	background-color: var(--secondary-background-color);
-	margin-bottom: 30px;
+	// width: 210px;
+	height: 92px;
+	background-color: transparent;
+	border: 1px solid var(--social-team-color);
+	box-sizing: border-box;
+	border-radius: 4px;
+	transition: border-color var(--transition);
+
+	&:hover,
+	&:focus {
+		border-color: var(--effects-color);
+	}
+	@media screen and (min-width: 768px) {
+		width: 226px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 170px;
+	}
 }
-.logo__img {
-	width: 70px;
-	height: 70px;
-}
-.benefits__name {
-	margin-bottom: 10px;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-	color: var(--secondary-title-color);
-}
-.benefits__text {
-	font-size: 14px;
-	line-height: 1.17;
-	letter-spacing: 0.03em;
-	color: var(--text-color);
+.clients__icon {
+	fill: var(--social-team-color);
+	width: 108px;
+	height: 60px;
+	transition: fill var(--transition);
+
+	.clients__link:hover &,
+	.clients__link:focus & {
+		fill: var(--effects-color);
+	}
 }

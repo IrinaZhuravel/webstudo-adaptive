@@ -27,7 +27,7 @@
 	color: var(--primary-logo-color);
 
 	@media screen and (min-width: 768px) {
-		margin-right: 88px;
+		margin-right: auto;
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -169,10 +169,15 @@
 	margin-right: 50px;
 }
 .nav__link {
+	padding-top: 32px;
+	padding-bottom: 41px;
 	color: var(--header-text-color);
 	position: relative;
 	transition: color var(--transition);
 
+	@media screen and (min-width: 1200px) {
+		padding-bottom: 32px;
+	}
 	&:hover,
 	&:focus {
 		color: var(--effects-color);
@@ -185,14 +190,10 @@
 		height: 4px;
 		border-radius: 2px;
 		background-color: var(--effects-color);
-		bottom: -42px;
-
-		@media screen and (min-width: 1200px) {
-			bottom: -33px;
-		}
+		bottom: 0;
 	}
 }
-.active {
+.current {
 	color: var(--effects-color);
 }
 
@@ -207,8 +208,12 @@
 	}
 }
 .header__contacts {
-	margin-left: auto;
+	margin-left: 0;
+	@media screen and (min-width: 768px) {
+		margin-left: auto;
+	}
 }
+
 .contacts__item:not(:last-child) {
 	@media screen and (min-width: 768px) {
 		margin-bottom: 10px;
